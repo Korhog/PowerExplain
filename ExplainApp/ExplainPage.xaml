@@ -120,7 +120,7 @@
                                     <Border
                                         Width="{TemplateBinding Width}" 
                                         Padding="8" 
-                                        BorderThickness="2"
+                                        BorderThickness="1"
                                         CornerRadius="3">
                                         <Border.BorderBrush>
                                             <LinearGradientBrush EndPoint="0,1">
