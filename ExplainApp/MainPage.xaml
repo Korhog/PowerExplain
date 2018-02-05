@@ -13,7 +13,15 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Content="Explain" Click="OnExplain"/>
-        <TextBox x:Name="data" Grid.Row="1" TextWrapping="Wrap"/>
+        <Button Content="Explain" Click="OnExplain" Margin="10,10,0,4"/>
+        <TextBox
+            BorderThickness="1" 
+            x:Name="data"
+            Grid.Row="1" 
+            FontSize="12"
+            FontFamily="Consolas"
+            IsSpellCheckEnabled="False"
+            TextWrapping="Wrap"             
+            Margin="10,0,10,10"/>
     </Grid>
 </Page>

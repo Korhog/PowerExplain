@@ -16,7 +16,7 @@ namespace Explainer.Core
         {
             rxFormat = new Regex("\"", RegexOptions.IgnoreCase);
             rxOffset = new Regex(@"^\s+", RegexOptions.IgnoreCase);
-            rxNextNode = new Regex(@"^\s+->", RegexOptions.IgnoreCase);
+            rxNextNode = new Regex(@"(->)|(SubPlan)", RegexOptions.IgnoreCase);
         }
 
         public void ReadFile(string fileName)

@@ -15,6 +15,12 @@ namespace Explainer.Core
         /// <summary>Внутренние узлы</summary>
         ObservableCollection<IQueryExpressionTreeNode> Nodes { get; }
 
+        /// <summary>Расход памяти</summary>
+        Buffers Buffers { get; }
+
+        /// <summary>Внутренние узлы</summary>
+        string FullDecs { get; }
+
         /// <summary>Распарсить параметры</summary>
         void ParseParams(string paramsLine);
 
@@ -23,5 +29,7 @@ namespace Explainer.Core
         OperationParams ActualTime { get; }
 
         int? RowsRemovedByFilter { get; }
+
+
     }
 }

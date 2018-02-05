@@ -14,23 +14,28 @@ namespace Explainer.Core
     {
         string name = "node";
         OperationParams costs;
+        public OperationParams Costs { get { return costs; } }
+
         OperationParams actualTime;
+        public OperationParams ActualTime { get { return actualTime; } }
+
+        Buffers buffers;
+        public Buffers Buffers { get { return buffers; } }
 
         ObservableCollection<IQueryExpressionTreeNode> innerNodes;
 
-        public ObservableCollection<IQueryExpressionTreeNode> Nodes { get { return innerNodes; } }
-
-        public OperationParams Costs { get { return costs; } }
-
-        public OperationParams ActualTime { get { return actualTime; } }
+        public ObservableCollection<IQueryExpressionTreeNode> Nodes { get { return innerNodes; } }         
 
         int? rowsRemovedByFilter;
         public int? RowsRemovedByFilter { get { return rowsRemovedByFilter; } }
 
+        string fullDecs;
+        public string FullDecs { get { return fullDecs; } }
+
         public QueryExpressionTreeNode(string nameNode = null)
         {
             if (nameNode != null)
-                name = nameNode;
+                name = Regex.Replace(nameNode.Replace("->", ""), @"\([^)]+\)", "").Trim();
 
             innerNodes = new ObservableCollection<IQueryExpressionTreeNode>();
         }
@@ -49,6 +54,14 @@ namespace Explainer.Core
 
         public void ParseParams(string paramsLine)
         {
+            if (paramsLine.Trim() != string.Empty)
+            {
+                if (fullDecs == null)
+                    fullDecs = "";
+                else
+                    fullDecs += fullDecs == "" ? paramsLine.Trim() : ("\n" + paramsLine.Trim());
+            }
+
             Regex rxNums = new Regex(@"\d+(,\d+)*", RegexOptions.IgnoreCase);
             Regex rxRows = new Regex(@"rows=\d+", RegexOptions.IgnoreCase);
             Regex rxCost = new Regex(@"cost=\d+.\d+..\d+.\d+", RegexOptions.IgnoreCase);
@@ -63,13 +76,19 @@ namespace Explainer.Core
                     int RRbF = 0;
                     if (int.TryParse(prop[1], out RRbF))
                         rowsRemovedByFilter = RRbF;
-                }              
+                }    
+                
+                // Память
+                if (prop[0].ToUpper() == "BUFFERS")
+                {
+                    buffers = Buffers.Parse(prop[1]);
+                }
             }
 
 
             var cost = rxCost.Match(paramsLine);
             var time = rxActualTime.Match(paramsLine);
-            var rows = rxRows.Matches(paramsLine);
+            var rows = rxRows.Matches(paramsLine);            
 
             if (cost.Success)
             {
