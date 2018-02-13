@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplainApp", "ExplainApp\ExplainApp.csproj", "{E9DB32CB-1164-4342-B9C3-94CF32E2F763}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplainConsole", "ExplainConsole\ExplainConsole.csproj", "{B240CD6B-4980-4F35-98B2-E4A35BFC7373}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExplainConsole", "ExplainConsole\ExplainConsole.csproj", "{B240CD6B-4980-4F35-98B2-E4A35BFC7373}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explainer.Core", "Explainer.Core\Explainer.Core.csproj", "{4E700497-3602-4231-8FD2-9D7BF1ABB464}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Explainer.Core", "Explainer.Core\Explainer.Core.csproj", "{4E700497-3602-4231-8FD2-9D7BF1ABB464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explainer.Web", "Explainer.Web\Explainer.Web.csproj", "{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,22 @@ Global
 		{4E700497-3602-4231-8FD2-9D7BF1ABB464}.Release|x64.Build.0 = Release|Any CPU
 		{4E700497-3602-4231-8FD2-9D7BF1ABB464}.Release|x86.ActiveCfg = Release|Any CPU
 		{4E700497-3602-4231-8FD2-9D7BF1ABB464}.Release|x86.Build.0 = Release|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Debug|ARM.Build.0 = Debug|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Debug|x64.Build.0 = Debug|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Debug|x86.Build.0 = Debug|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Release|ARM.ActiveCfg = Release|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Release|ARM.Build.0 = Release|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Release|x64.ActiveCfg = Release|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Release|x64.Build.0 = Release|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Release|x86.ActiveCfg = Release|Any CPU
+		{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
