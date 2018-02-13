@@ -1,0 +1,22 @@
+﻿.exp-text-box {
+    width: 100%;
+}
+
+div .tree-node {
+    border: 1px solid red;
+}
+
+div .tree-node-children {
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+}
+
+.grid-item {
+    border: 1px solid Gray;
+    padding: .2em;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}

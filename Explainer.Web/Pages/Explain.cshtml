@@ -1,0 +1,24 @@
+﻿@page
+@model Explainer.Web.Pages.ExplainModel
+@{
+    ViewData["Title"] = "Explain";
+}
+
+<h2>Explain</h2>
+<div id="rows">
+    @foreach (var Node in Model.Rows)
+    {
+        <div>
+            <div class="grid">
+                <div class="grid-item">left side data</div>
+                <div class="grid-item" style=@string.Format("margin-left:{0}px", Node.TreeMargin)>@Node.Name</div>
+                <div class="grid-item">right side data</div>
+            </div>
+        </div>
+
+        <div class="tree-node-children">
+            @Html.Partial("TreeNode", Node)
+        </div>
+    }
+</div>
+

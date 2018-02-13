@@ -13,5 +13,12 @@ namespace Explainer.Web.Pages
         {
 
         }
+
+        public IActionResult OnPost(string data)
+        {
+            var transfer = Explainer.Web.Model.DataTransfer.GetInstance();
+            transfer.SetData(data);
+            return RedirectToPage("Explain");
+        }
     }
 }
