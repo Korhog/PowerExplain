@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExplainConsole", "ExplainCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Explainer.Core", "Explainer.Core\Explainer.Core.csproj", "{4E700497-3602-4231-8FD2-9D7BF1ABB464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explainer.Web", "Explainer.Web\Explainer.Web.csproj", "{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Explainer.Web", "Explainer.Web\Explainer.Web.csproj", "{BC9026F1-0C72-45C3-B4F9-DFE07AE0AC67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

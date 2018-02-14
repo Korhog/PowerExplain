@@ -13,10 +13,16 @@ namespace Explainer.Web.Pages
     {
         public List<TreeNode> Rows;        
 
-        public void OnGet(object data)
+        public void OnGet()
+        {
+            Rows = new List<TreeNode>();
+        }
+
+        public void OnGetTransfer(string key)
         {
             var transfer = DataTransfer.GetInstance();
-            Rows = TreeBuilder.Build(transfer.GetData());
+            var data = transfer.GetData(key);
+            Rows = TreeBuilder.Build(data);
         }
     }
 }

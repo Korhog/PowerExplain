@@ -11,11 +11,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\css\tree.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Styles\" />
+    <None Include="wwwroot\images\arrow-down-c.svg" />
+    <None Include="wwwroot\images\arrow-up-c.svg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Explainer.Core\Explainer.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\png\" />
   </ItemGroup>
 </Project>

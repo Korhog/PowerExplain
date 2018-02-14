@@ -2,21 +2,72 @@
     width: 100%;
 }
 
-div .tree-node {
-    border: 1px solid red;
-}
-
-div .tree-node-children {
-}
-
 .grid {
     display: grid;
-    grid-template-columns: 150px auto 150px;
+    grid-template-columns:80px 80px 50px 50px auto 150px;
 }
 
-.grid-item {
-    border: 1px solid Gray;
+div .tree-node {
+    border-left: 4px solid #c1c1c1;
+}
+
+div.tree-row:hover {
+    background: #f1f1f1;
+}
+
+div .description {
     padding: .2em;
-    margin-right: 1px;
-    margin-bottom: 1px;
+    background: #c1c1c1;
+    border: 1px solid #a5a5a5;
+    color: #2d3341;
+    font-size: 11px;
+}
+
+div.grid-item {
+    font-size: 12px;
+    font-family: Consolas;
+    padding: .2em;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+div.tree-header {
+    min-height: 40px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+div.tree-header-line {    
+    border-left: 1px solid #c1c1c1;
+}
+
+.memory-success {
+    color: #487055;
+    background-color: #A5FFC2;
+    border-bottom: 1px solid #81C697;
+}
+
+.memory-warning {
+    color: #88000F;
+    background-color: #FFEDA0;
+    border-bottom: 1px solid #D8C97D;
+}
+
+.memory-danger {
+    color: #88000F;
+    background-color: #FF958C;    
+    border-bottom: 1px solid #88000F;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    fill:red;
+}
+
+.scrollable {
+    position: absolute;
+    bottom: 20px;
+    top: 40px;
+    width: 100%;
+    overflow: auto; /* свойство для прокрутки по горизонтали. Автоматом, если больше блока */
 }

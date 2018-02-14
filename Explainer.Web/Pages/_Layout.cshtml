@@ -4,9 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Explainer.Web</title>
-    
+
     <link rel="stylesheet" href="~/css/tree.css" />
-    
+    <link rel="stylesheet" href="~/css/app.css" />
+    <link rel="stylesheet" href="~/css/ionicons.min.css" />
+    <link rel="subresource" href="~/images/arrow-down-c.svg" />
+    <link rel="subresource" href="~/images/arrow-up-c.svg" />
+
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -34,10 +38,6 @@
     </nav>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2017 - Explainer.Web</p>
-        </footer>
     </div>
 
     <environment include="Development">

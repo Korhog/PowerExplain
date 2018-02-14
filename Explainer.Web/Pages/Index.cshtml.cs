@@ -2,23 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Explainer.Web.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Explainer.Web.Pages
-{
+{ 
     public class IndexModel : PageModel
     {
-        public void OnGet()
-        {
-
-        }
+        public string ExplainText { get; set; }
 
         public IActionResult OnPost(string data)
         {
-            var transfer = Explainer.Web.Model.DataTransfer.GetInstance();
-            transfer.SetData(data);
-            return RedirectToPage("Explain");
+            var guid = System.Guid.NewGuid().ToString();
+            DataTransfer.GetInstance().SetData(guid, data);
+            return RedirectToPage("Explain", "Transfer", new { key = guid });
         }
     }
 }
